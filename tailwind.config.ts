@@ -60,6 +60,7 @@ module.exports = {
       },
       fontFamily: {
         "main-tetx": "var(--main-tetx-font-family)",
+        heading: ["Quicksand", "Nunito", "sans-serif"],
         sans: [
           "ui-sans-serif",
           "system-ui",

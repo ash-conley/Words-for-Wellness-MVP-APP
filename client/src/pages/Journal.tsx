@@ -19,7 +19,7 @@ export default function Journal() {
   const [promptResponse, setPromptResponse] = useState("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pb-24">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-teal-50 pb-24">
       <header className="p-6 flex items-center gap-4">
         <Button
           variant="ghost"
@@ -29,7 +29,7 @@ export default function Journal() {
         >
           <ChevronLeftIcon className="w-6 h-6" />
         </Button>
-        <h1 className="text-2xl font-semibold text-gray-800">Journal</h1>
+        <h1 className="text-2xl font-heading font-semibold text-gray-800">Journal</h1>
       </header>
 
       <main className="px-6">
@@ -37,13 +37,13 @@ export default function Journal() {
           <TabsList className="w-full bg-white/60 backdrop-blur-sm rounded-full p-1 mb-6">
             <TabsTrigger
               value="guided"
-              className="flex-1 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-400 data-[state=active]:to-pink-400 data-[state=active]:text-white"
+              className="flex-1 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-400 data-[state=active]:to-purple-400 data-[state=active]:text-white"
             >
               Guided
             </TabsTrigger>
             <TabsTrigger
               value="freewrite"
-              className="flex-1 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-400 data-[state=active]:to-pink-400 data-[state=active]:text-white"
+              className="flex-1 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-400 data-[state=active]:to-purple-400 data-[state=active]:text-white"
             >
               Free Write
             </TabsTrigger>
@@ -56,7 +56,7 @@ export default function Journal() {
                 key={index}
                 className={`cursor-pointer transition-all border-none shadow-md rounded-3xl overflow-hidden ${
                   selectedPrompt === index
-                    ? "bg-gradient-to-br from-purple-100 to-pink-100"
+                    ? "bg-gradient-to-br from-blue-100 to-purple-100"
                     : "bg-white/60 backdrop-blur-sm hover:bg-white/80"
                 }`}
                 onClick={() => setSelectedPrompt(index)}
@@ -73,9 +73,9 @@ export default function Journal() {
                   placeholder="Write your thoughts here..."
                   value={promptResponse}
                   onChange={(e) => setPromptResponse(e.target.value)}
-                  className="min-h-[200px] bg-white/60 backdrop-blur-sm border-none rounded-3xl p-6 resize-none focus-visible:ring-2 focus-visible:ring-purple-300"
+                  className="min-h-[200px] bg-white/60 backdrop-blur-sm border-none rounded-3xl p-6 resize-none focus-visible:ring-2 focus-visible:ring-blue-300"
                 />
-                <Button className="w-full bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-500 hover:to-pink-500 text-white rounded-full py-6 text-base font-medium shadow-md">
+                <Button className="w-full bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white rounded-full py-6 text-base font-medium shadow-md">
                   Save Entry
                 </Button>
               </div>
@@ -87,9 +87,9 @@ export default function Journal() {
               placeholder="What's on your mind?"
               value={freeWriteText}
               onChange={(e) => setFreeWriteText(e.target.value)}
-              className="min-h-[400px] bg-white/60 backdrop-blur-sm border-none rounded-3xl p-6 resize-none focus-visible:ring-2 focus-visible:ring-purple-300 text-gray-700"
+              className="min-h-[400px] bg-white/60 backdrop-blur-sm border-none rounded-3xl p-6 resize-none focus-visible:ring-2 focus-visible:ring-blue-300 text-gray-700"
             />
-            <Button className="w-full bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-500 hover:to-pink-500 text-white rounded-full py-6 text-base font-medium shadow-md">
+            <Button className="w-full bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white rounded-full py-6 text-base font-medium shadow-md">
               Save Entry
             </Button>
           </TabsContent>

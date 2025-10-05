@@ -27,7 +27,7 @@ export default function BottomNav() {
               <div
                 className={`p-2 rounded-full transition-all ${
                   isActive
-                    ? "bg-gradient-to-br from-purple-400 to-pink-400 text-white"
+                    ? "bg-gradient-to-br from-teal-400 to-cyan-400 text-white"
                     : "text-gray-400"
                 }`}
               >
@@ -35,7 +35,7 @@ export default function BottomNav() {
               </div>
               <span
                 className={`text-xs font-medium ${
-                  isActive ? "text-purple-600" : "text-gray-400"
+                  isActive ? "text-teal-600" : "text-gray-400"
                 }`}
               >
                 {item.label}

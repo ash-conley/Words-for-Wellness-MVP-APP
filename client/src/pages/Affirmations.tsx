@@ -27,13 +27,13 @@ export default function Affirmations() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 pb-24 flex items-center justify-center px-6">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 pb-24 flex items-center justify-center px-6">
       <div className="w-full max-w-md space-y-8">
-        <h1 className="text-2xl font-semibold text-gray-800 text-center">Daily Affirmation</h1>
+        <h1 className="text-2xl font-heading font-semibold text-gray-800 text-center">Daily Affirmation</h1>
 
-        <Card className="bg-gradient-to-br from-lavender-100 to-purple-100 border-none shadow-xl rounded-3xl overflow-hidden">
+        <Card className="bg-gradient-to-br from-emerald-100 to-teal-100 border-none shadow-xl rounded-3xl overflow-hidden">
           <CardContent className="p-12 text-center">
-            <p className="text-2xl font-medium text-gray-800 leading-relaxed">
+            <p className="text-2xl font-heading font-medium text-gray-800 leading-relaxed">
               {currentAffirmation}
             </p>
           </CardContent>
@@ -47,7 +47,7 @@ export default function Affirmations() {
             <RefreshCwIcon className="w-5 h-5 mr-2" />
             Refresh
           </Button>
-          <Button className="flex-1 bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-500 hover:to-pink-500 text-white rounded-full py-6 text-base font-medium shadow-md">
+          <Button className="flex-1 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-500 hover:to-teal-500 text-white rounded-full py-6 text-base font-medium shadow-md">
             <HeartIcon className="w-5 h-5 mr-2" />
             Save to Word Bank
           </Button>
