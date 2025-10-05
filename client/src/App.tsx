@@ -4,17 +4,25 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
+import BottomNav from "@/components/BottomNav";
 
-import { CalendarScreen } from "@/pages/CalendarScreen";
+import Dashboard from "@/pages/Dashboard";
+import Journal from "@/pages/Journal";
+import Affirmations from "@/pages/Affirmations";
+import Profile from "@/pages/Profile";
 
 function Router() {
   return (
-    <Switch>
-      {/* Add pages below */}
-      <Route path="/" component={CalendarScreen} />
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path="/" component={Dashboard} />
+        <Route path="/journal" component={Journal} />
+        <Route path="/affirmations" component={Affirmations} />
+        <Route path="/profile" component={Profile} />
+        <Route component={NotFound} />
+      </Switch>
+      <BottomNav />
+    </>
   );
 }
 
