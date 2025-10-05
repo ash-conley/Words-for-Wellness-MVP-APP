@@ -31,8 +31,10 @@ export default function Profile() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleSaveName = () => {
-    setUserName(editName);
-    setIsDialogOpen(false);
+    if (editName.trim()) {
+      setUserName(editName.trim());
+      setIsDialogOpen(false);
+    }
   };
 
   return (
